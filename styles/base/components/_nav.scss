@@ -1,0 +1,37 @@
+.bd-nav {
+  padding: 0 191px 0 191px;
+  background-color: $bg-nav;
+  height: 72px;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .bd-nav__logo {
+    cursor: pointer;
+  }
+  button {
+    background-color: transparent;
+    border: solid;
+    border-color: $links-color;
+    border-width: 1px;
+    color: $links-color;
+    border-radius: 20px;
+    padding: 6px 17px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .bd-navIcon {
+    cursor: pointer;
+    border-radius: 100%;
+    height: 55px;
+    width: 55px;
+    path {
+      fill: $text-primary;
+    }
+  }
+  .bd-nav__rightside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+}

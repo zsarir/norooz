@@ -1,0 +1,42 @@
+.bd-filter-listing {
+  padding-left: 15px;
+  background-color: $bg-input;
+  border: solid;
+  border-color: $text-secondary;
+  border-width: 1px;
+  color: $text-primary;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border: none;
+    background-color: transparent;
+    color: $text-secondary;
+    width: 100%;
+    &:focus {
+      outline: none;
+    }
+  }
+  .bd-icon-container {
+    background-color: transparent;
+    gap: 20px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .bd-filter-icon {
+      cursor: pointer;
+      height: 24px;
+      width: 24px;
+      path {
+        fill: $text-primary;
+      }
+    }
+    .bd-search-icon {
+      cursor: pointer;
+      height: 56px;
+      width: 65px;
+    }
+  }
+}
