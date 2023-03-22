@@ -1,0 +1,1 @@
+<div class="bd-img-holder"></div>

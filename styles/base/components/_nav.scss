@@ -1,6 +1,27 @@
 .bd-nav {
-  padding: 0 191px 0 191px;
   background-color: $bg-nav;
+  @include xsmall {
+    padding: 0 23px 0 23px;
+    height: 66px;
+    button {
+      display: none;
+    }
+  }
+  @include mobile {
+    button {
+      display: none;
+    }
+    .bd-nav__logo {
+      width: 130px;
+    }
+    padding: 0 35px 0 35px;
+    height: 66px;
+  }
+  @include tablet {
+    padding: 0 35px 0 35px;
+    height: 66px;
+  }
+  padding: 0 191px 0 191px;
   height: 72px;
   width: auto;
   display: flex;

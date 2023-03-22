@@ -1,0 +1,29 @@
+.bd-input-simple {
+  display: block;
+  width: 100%;
+  height: auto;
+  &_label {
+    display: block;
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 29px;
+    color: $text-primary;
+  }
+  &_input {
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
+    padding: 3px 10px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: $text-secondary;
+    &:focus {
+      outline: none;
+    }
+  }
+}

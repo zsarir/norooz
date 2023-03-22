@@ -1,0 +1,19 @@
+.bd-side-menu {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-top: 1px solid $text-secondary;
+  border-bottom: 1px solid $text-secondary;
+  padding: 5px 0;
+  text-transform: uppercase;
+  background-color: $bg-color;
+}
+.bd-side-menu-active {
+  background-color: $color-primary !important;
+  color: $text-tertiary;
+}

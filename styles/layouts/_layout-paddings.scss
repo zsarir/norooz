@@ -1,0 +1,14 @@
+.bd-wrapper {
+  @include desktop {
+    padding-left: 191px;
+    padding-right: 191px;
+  }
+  @include tablet {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

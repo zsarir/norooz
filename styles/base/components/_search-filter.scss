@@ -14,6 +14,13 @@
     background-color: transparent;
     color: $text-secondary;
     width: 100%;
+    margin-left: 15px;
+
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 29px;
     &:focus {
       outline: none;
     }
@@ -30,7 +37,12 @@
       height: 24px;
       width: 24px;
       path {
-        fill: $text-primary;
+        stroke: $text-primary;
+      }
+      &:hover {
+        path {
+          stroke: $color-primary;
+        }
       }
     }
     .bd-search-icon {
@@ -39,4 +51,10 @@
       width: 65px;
     }
   }
+}
+.bd-select-container {
+  display: flex;
+  align-items: center;
+  border-right: solid 1px $text-secondary;
+  height: 56px;
 }

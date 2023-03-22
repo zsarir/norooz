@@ -1,0 +1,45 @@
+.btn-tertiary {
+  background-color: $bg-color;
+  color: $color-primary;
+  border-width: 1px;
+  border: solid;
+  border-radius: 5px;
+  border-color: $text-secondary;
+  padding: 15px 20px;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  width: 100%;
+  &:hover {
+    border-color: $color-primary;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: $text-tertiary;
+  border: $bg-color;
+  border-radius: 5px;
+  border-width: 1px;
+  border: solid;
+  padding: 15px 20px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  &:hover {
+    background-color: $bg-color;
+    color: $color-primary;
+  }
+  &:focus {
+    outline: none;
+  }
+}

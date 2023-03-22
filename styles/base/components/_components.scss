@@ -1,4 +1,6 @@
-// text
-p {
-  color: $color-warning;
-}
+@import "_nav";
+@import "_cat-item";
+@import "_search-filter";
+@import "_input-field";
+@import "_image-holder";
+@import "_side-menu";

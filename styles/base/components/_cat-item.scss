@@ -1,0 +1,59 @@
+.bd-cat_item {
+  border: solid;
+  border-color: $text-secondary;
+  border-radius: 5px;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+.bd-ratings {
+  .bd-star-active {
+    path {
+      fill: $color-rating;
+    }
+  }
+  .bd-star-not-active {
+    path {
+      fill: $text-secondary;
+    }
+  }
+}
+.bd-cat_item_detailed {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 15px 30px;
+  box-shadow: 0px 11px 33.3822px $text-secondary;
+  .bd-cat-items-right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    .bd-location-comp {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      color: $text-primary;
+    }
+    .bd-item-details {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      a {
+        color: $color-primary;
+        text-decoration: none;
+        font-family: "SF Pro Text";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 29px;
+      }
+    }
+  }
+}
