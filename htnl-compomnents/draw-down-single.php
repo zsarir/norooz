@@ -6,3 +6,4 @@
         <option value="some val1"> value 1</option>
         <option value="some val1"> value 1</option>
     </select>
+</div>
