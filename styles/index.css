@@ -364,6 +364,23 @@ template {
   outline: none;
 }
 
+.bd-back-btn {
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  cursor: pointer;
+}
+.bd-back-btn a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
 .bd-title {
   color: var(--text-primary);
   font-family: "SF Pro Text";
@@ -433,6 +450,38 @@ template {
   content: " ";
   display: block;
   height: 1px;
+}
+
+.bd-progressline {
+  height: 50px;
+  content: " ";
+  border-bottom: dashed 1px var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bd-progressline .bd-progressline_circle {
+  transform: translateY(50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: solid;
+  border-width: 1px;
+  border-color: var(--color-primary);
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--text-primary);
+}
+.bd-progressline .bd-progressline_circle_active {
+  color: var(--text-tertiary);
+  background-color: var(--color-primary);
 }
 
 .bd-nav {
@@ -634,12 +683,13 @@ template {
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  line-height: 29px;
+  height: 40px;
   padding: 3px 10px;
   border: solid;
   border-width: 1px;
   border-radius: 5px;
   border-color: var(--text-secondary);
+  width: 100%;
 }
 .bd-input-simple_input:focus {
   outline: none;
@@ -674,6 +724,28 @@ template {
 .bd-side-menu-active {
   background-color: var(--color-primary) !important;
   color: var(--text-tertiary);
+}
+
+.bd-color-pallete-container {
+  display: flex;
+}
+
+.bd-pallete-color {
+  content: " ";
+  width: 57px;
+  height: 39px;
+}
+.bd-pallete-color_1 {
+  background-color: green;
+}
+.bd-pallete-color_2 {
+  background-color: red;
+}
+.bd-pallete-color_3 {
+  background-color: blue;
+}
+.bd-pallete-color_4 {
+  background-color: black;
 }
 
 @media (min-width: 768px) {

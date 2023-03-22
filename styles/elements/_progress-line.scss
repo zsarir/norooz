@@ -1,0 +1,32 @@
+.bd-progressline {
+  height: 50px;
+  content: " ";
+  border-bottom: dashed 1px $color_primary;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .bd-progressline_circle {
+    transform: translateY(50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    border: solid;
+    border-width: 1px;
+    border-color: $color-primary;
+    background-color: $bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $text-primary;
+    &_active {
+      color: $text-tertiary;
+      background-color: $color_primary;
+    }
+  }
+}

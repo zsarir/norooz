@@ -43,3 +43,20 @@
     outline: none;
   }
 }
+
+.bd-back-btn {
+  color: $color-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}
