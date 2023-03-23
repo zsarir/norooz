@@ -1,3 +1,8 @@
+<div>
+
+    <?php echo "Wellcome Hello " . $name; ?>
+</div>
+
 <section class="bd-wrapper bd-grid-sidebar-right">
     <div class="bd-panel-sidebar-left bd-bordered ">
 
