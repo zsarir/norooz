@@ -1,0 +1,12 @@
+.bd-main-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("public/images/main-banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 540px;
+  width: 100%;
+}

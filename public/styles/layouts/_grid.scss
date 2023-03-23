@@ -1,0 +1,17 @@
+.bd-grid-50-width {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  &_gap_column {
+    grid-column-gap: $grid-50-gap;
+  }
+  &_gap {
+    grid-gap: $grid-24-gap;
+  }
+}
+
+.bd-grid-sidebar-right {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: $grid-24-gap;
+}

@@ -9,7 +9,7 @@
   text-align: center;
   cursor: pointer;
   white-space: nowrap;
-  width: 100%;
+  width: auto;
   &:hover {
     border-color: $color-primary;
   }
@@ -48,7 +48,7 @@
   color: $color-primary;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-family: "SF Pro Text";
   font-style: normal;
   font-weight: 400;
