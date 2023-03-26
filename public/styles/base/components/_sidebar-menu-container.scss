@@ -1,2 +1,12 @@
-.bd-sidebar-menu-container {
+.bd-panel-sidebar-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.bd-panel-sidebar-left {
+  padding: 100px 115px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
 }

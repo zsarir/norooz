@@ -12,3 +12,18 @@
     padding-right: 16px;
   }
 }
+
+.bd-wrapper-thin {
+  @include desktop {
+    padding-left: 511px;
+    padding-right: 511px;
+  }
+  @include tablet {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

@@ -11,3 +11,9 @@ function dd($var)
     echo "</pre>";
     die();
 }
+
+function view($foldername, $viewname, $data = [])
+{
+    extract($data);
+    require base_path("views/{$foldername}/{$viewname}.view.php");
+}
