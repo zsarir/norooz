@@ -1,26 +1,37 @@
 <?php
 
+namespace app;
+
+use PDO;
+
 class Database
 {
-    public $dsn;
-    public $pdo;
 
-    public function __construct()
+    public $connection;
+    public $statement;
+    public function __construct($config, $dbuser = 'root', $dbpassword = 'root')
     {
-        $this->dsn  = "mysql:host=mvc;port=3306;dbname=mvcdb;";
-        $this->pdo = new PDO($this->dsn, 'root', 'root');
+
+        $dsn  = 'mysql:' . http_build_query($config['database'], '', ';');
+        $this->connection = new PDO($dsn, $dbuser, $dbpassword, [
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]);
     }
 
-    public function query($query)
+    public function query($query, $params = [])
     {
-        $statement = $this->pdo->prepare($query);
-        $statement->execute();
-        return $statement->fetchall(PDO::FETCH_ASSOC);
+        $this->statement = $this->connection->prepare($query);
+        $this->statement->execute($params);
+        return $this;
     }
 
-    public function insert($query)
+    public function fetchAll()
     {
-        $statement = $this->pdo->prepare($query);
-        return $statement->execute();
+        return $this->statement->fetchAll();
+    }
+
+    public function find()
+    {
+        return $this->statement->fetch();
     }
 }

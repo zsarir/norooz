@@ -1,3 +1,5 @@
+<?php require base_path("views/partials/head.php"); ?>
+<?php require base_path("views/partials/navbar.php"); ?>
 <div class="bd-wrapper-thin">
     <div class="bd-gap-50"></div>
     <div class="bd-back-btn">
@@ -50,3 +52,5 @@
 
 
 </div>
+
+<?php require base_path("views/partials/footer.php"); ?>

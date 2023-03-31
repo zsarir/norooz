@@ -850,6 +850,9 @@ template {
   grid-template-columns: 1fr 2fr;
   gap: 50px;
 }
+.bd-panel-sidebar-left_left {
+  justify-content: center;
+}
 
 .bd-checkbox-single-container {
   display: flex;

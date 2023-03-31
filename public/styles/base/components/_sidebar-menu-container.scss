@@ -9,4 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 50px;
+  &_left {
+    justify-content: center;
+  }
 }

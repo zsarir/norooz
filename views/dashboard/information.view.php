@@ -1,28 +1,46 @@
+<?php require base_path("views/partials/head.php"); ?>
+<?php require base_path("views/partials/navbar.php"); ?>
+
 <div class="bd-gap-100"></div>
 <section class="bd-wrapper bd-grid-right-sidebar">
     <div class="bd-panel-sidebar-left bd-bordered ">
-        <div class="bd-panel-sidebar-left_left">
+        <div clascs="bd-panel-sidebar-left_left">
             <div class="bd-img-holder"></div>
             <div class="bd-gap-24"></div>
             <button class="btn-primary  ">
                 Edit Photo
             </button>
         </div>
-        <div class="bd-panel-sidebar-left_right">
-            <div class="bd-input-simple">
-                <label class="bd-input-simple_label" for="Name">Name</label>
-                <input name="Name" class="bd-input-simple_input" type="text">
-            </div>
-            <div class="bd-gap-24"></div>
-            <div class="bd-input-simple">
-                <label class="bd-input-simple_label" for="Name">Name</label>
-                <input name="Name" class="bd-input-simple_input" type="text">
-            </div>
-            <div class="bd-gap-50"></div>
 
-            <button class="btn-primary  ">
-                Edit Photo
-            </button>
+        <div class="bd-panel-sidebar-left_right">
+            <form action="/updateinformation" method="POST">
+                <div class="bd-input-simple">
+                    <label class="bd-input-simple_label" for="name">Name</label>
+                    <input name="name" class="bd-input-simple_input" type="text">
+                </div>
+                <div class="bd-gap-24"></div>
+                <div class="bd-input-simple">
+                    <label class="bd-input-simple_label" for="user_name">Username</label>
+                    <input name="user_name" class="bd-input-simple_input" type="text">
+                </div>
+                <div class="bd-gap-24"></div>
+                <div class="bd-input-simple">
+                    <label class="bd-input-simple_label" for="display_name">Display Name</label>
+                    <input name="display_name" class="bd-input-simple_input" type="text">
+                </div>
+                <div class="bd-gap-24"></div>
+                <div class="bd-input-simple">
+                    <label class="bd-input-simple_label" for="email">Email</label>
+                    <input name="email" class="bd-input-simple_input" disabled type="text" <?php
+                                                                                            echo "value='{$email}'";
+                                                                                            ?>>
+                </div>
+                <div class="bd-gap-50"></div>
+
+                <button type="submit" class="btn-primary">
+                    Update Info
+                </button>
+            </form>
         </div>
 
     </div>
@@ -51,3 +69,5 @@
     </div>
 </section>
 <div class="bd-gap-100"></div>
+
+<?php require base_path("views/partials/footer.php"); ?>

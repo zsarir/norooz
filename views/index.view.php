@@ -1,3 +1,5 @@
+<?php require base_path("views/partials/head.php"); ?>
+<?php require base_path("views/partials/navbar.php"); ?>
 <section class="bd-main-banner">
     <span class="bd-title-main">BUSINUSS DIRECTORY</span>
 </section>
@@ -72,7 +74,7 @@
                 <div class="bd-title-light">
                     Business
                 </div>
-                <div class="bd-price-title">
+                <div id="pr" class="bd-price-title">
                     19.99 $
                 </div>
             </div>
@@ -108,3 +110,5 @@
 <div class="bd-gap-100">
 
 </div>
+
+<?php require base_path("views/partials/footer.php"); ?>

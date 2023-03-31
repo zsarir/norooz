@@ -12,8 +12,26 @@ function dd($var)
     die();
 }
 
-function view($foldername, $viewname, $data = [])
+function view($folderName, $viewName, $data = [])
 {
     extract($data);
-    require base_path("views/{$foldername}/{$viewname}.view.php");
+    require base_path("views/{$folderName}/{$viewName}.view.php");
+}
+
+function controller($folderName, $controllerName, $data = [])
+{
+    extract($data);
+    require base_path("controllers/{$folderName}/{$controllerName}.php");
+}
+
+
+function login($email)
+{
+    $_SESSION['user'] = [
+        'email' => $email,
+        'user_name' => $email,
+        'display_name' => $email,
+        'name' => $email,
+    ];
+    $_SESSION['login'] = true;
 }
