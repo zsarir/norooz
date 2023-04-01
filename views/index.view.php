@@ -18,7 +18,7 @@
                 </svg>
             </div>
         </div>
-        <button class="btn-tertiary  bd-m-l-10p">
+        <button id="test" class="btn-tertiary  bd-m-l-10p">
             GET BUSSINESS DIRECTORY
         </button>
         <div class="bd-back-btn bd-p-t-10">
@@ -74,7 +74,7 @@
                 <div class="bd-title-light">
                     Business
                 </div>
-                <div id="pr" class="bd-price-title">
+                <div class="bd-price-title">
                     19.99 $
                 </div>
             </div>
