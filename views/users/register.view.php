@@ -16,13 +16,26 @@
     <form action="/signup" method="POST">
         <div class="bd-input-simple">
             <label class="bd-input-simple_label" for="email">Email</label>
-            <input name="email" id="email" class="bd-input-simple_input" type="text" <?php if (isset($email)) {
-                                                                                            echo "value='{$email}'";
+            <input name="email" id="email" class="bd-input-simple_input" type="text" <?php if (isset($params['email'])) {
+                                                                                            echo "value='{$params['email']}'";
                                                                                         } ?>>
         </div>
         <?php
         if (isset($errors['email']))
             echo "<div class='bd-error'>{$errors['email']}</div>";
+        ?>
+        <div class="bd-gap-24"></div>
+        <div class="bd-input-simple">
+            <label class="bd-input-simple_label" for="user_name">User Name</label>
+            <input name="user_name" id="user_name" class="bd-input-simple_input" type="text" <?php
+                                                                                                if (isset($params['user_name'])) {
+                                                                                                    echo "value='{$params['user_name']}'";
+                                                                                                }  ?>>
+        </div>
+
+        <?php
+        if (isset($errors['user_name']))
+            echo "<div class='bd-error'>{$errors['user_name']}</div>";
         ?>
         <div class="bd-gap-24"></div>
         <div class="bd-input-simple">
@@ -33,6 +46,25 @@
         if (isset($errors['pass']))
             echo "<div class='bd-error'>{$errors['pass']}</div>";
         ?>
+
+        <div class="bd-gap-24"></div>
+        <div class="bd-input-simple">
+            <label class="bd-input-simple_label" for="name">Name</label>
+            <input name="name" id="name" class="bd-input-simple_input" type="text" <?php
+                                                                                    if (isset($params['name'])) {
+                                                                                        echo "value='{$params['name']}'";
+                                                                                    }
+                                                                                    ?>>
+        </div>
+
+        <div class="bd-gap-24"></div>
+        <div class="bd-input-simple">
+            <label class="bd-input-simple_label" for="display_name">Display Name</label>
+            <input name="display_name" id="display_name" class="bd-input-simple_input" type="text" <?php if (isset($params['display_name'])) {
+                                                                                                        echo "value='{$params['display_name']}'";
+                                                                                                    } ?>>
+        </div>
+
         <div class="bd-gap-24"></div>
         <div class="bd-checkbox-single-container">
             <input name="rememberme" id="rememberme" class="bd-checkbox" type="checkbox">

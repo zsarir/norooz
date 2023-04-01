@@ -25,13 +25,13 @@ function controller($folderName, $controllerName, $data = [])
 }
 
 
-function login($email)
+function login($user_id, $email, $user_name, $name, $display_name)
 {
     $_SESSION['user'] = [
+        'user_id' => $user_id,
         'email' => $email,
-        'user_name' => $email,
-        'display_name' => $email,
-        'name' => $email,
+        'user_name' => $user_name,
+        'display_name' => $display_name,
+        'name' => $name,
     ];
-    $_SESSION['login'] = true;
 }
