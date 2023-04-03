@@ -14,4 +14,4 @@ $routings->post("/dashboard/upload.php", "upload.php");
 $routings->post("/change-user-photo", "/controllers/dashboard/upload_user_photo.php");
 
 
-$routings->get("/add-listing", "controllers/listings/create.php");
+$routings->get("/add-listing", "controllers/listings/new.php");

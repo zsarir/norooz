@@ -1,3 +1,1 @@
 <?php
-
-view('listings', 'create');
