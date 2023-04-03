@@ -1,5 +1,7 @@
 .bd-nav {
+  position: relative;
   background-color: $bg-nav;
+
   @include xsmall {
     padding: 0 23px 0 23px;
     height: 66px;
@@ -41,6 +43,7 @@
     cursor: pointer;
     white-space: nowrap;
   }
+
   .bd-navIcon {
     cursor: pointer;
     border-radius: 100%;
@@ -49,10 +52,23 @@
     path {
       fill: $text-primary;
     }
+    &:hover {
+      .bd-menu {
+        display: block;
+      }
+    }
   }
   .bd-nav__rightside {
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+}
+
+.bd-menu-ing {
+  &:hover {
+    .bd-menu {
+      display: block;
+    }
   }
 }

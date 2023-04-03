@@ -1,11 +1,17 @@
 <?php
 session_start();
 
+use app\content\Plans;
 use app\Router;
+use app\Login;
+use app\Database\Select;
+use app\Database;
+use app\App;
 
+
+
+const SITE_URL = 'https://norooz';
 const BASE_PATH = __DIR__  . '/../';
-
-
 
 $uri = $_SERVER['REQUEST_URI'];
 require  '../core/functions.php';
@@ -15,7 +21,6 @@ spl_autoload_register(function ($class) {
 
     require base_path("{$class}.php");
 });
-
 
 
 

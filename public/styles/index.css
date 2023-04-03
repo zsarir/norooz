@@ -430,6 +430,10 @@ template {
   text-align: center;
 }
 
+.bd-text-align-start {
+  text-align: start;
+}
+
 .bd-title-main {
   font-family: "SF Pro Text";
   font-style: normal;
@@ -503,6 +507,8 @@ template {
 }
 
 .bd-progressline {
+  margin-top: 24px;
+  margin-bottom: 24px;
   height: 50px;
   content: " ";
   border-bottom: dashed 1px var(--color-primary);
@@ -534,6 +540,24 @@ template {
   background-color: var(--color-primary);
 }
 
+.bd-progressText {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-primary);
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 .bd-bordered {
   border: solid;
   border-size: 1px;
@@ -559,7 +583,28 @@ template {
   margin-buttom: 5px;
 }
 
+.bd-warning-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 16px;
+  background-color: #fef7d3;
+  color: var(--text-primary);
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 29px;
+  border: solid;
+  border-width: 1px;
+  border-color: var(--text-secondary);
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
 .bd-nav {
+  position: relative;
   background-color: var(--bg-nav);
   padding: 0 191px 0 191px;
   height: 72px;
@@ -618,10 +663,17 @@ template {
 .bd-nav .bd-navIcon path {
   fill: var(--text-primary);
 }
+.bd-nav .bd-navIcon:hover .bd-menu {
+  display: block;
+}
 .bd-nav .bd-nav__rightside {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.bd-menu-ing:hover .bd-menu {
+  display: block;
 }
 
 .bd-cat_item {
@@ -634,7 +686,7 @@ template {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 15px;
+  padding: 30px 15px;
 }
 
 .bd-ratings .bd-star-active path {
@@ -758,7 +810,7 @@ template {
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
-  height: 40px;
+  height: 48px;
   padding: 3px 10px;
   border: solid;
   border-width: 1px;
@@ -766,7 +818,23 @@ template {
   border-color: var(--text-secondary);
   width: 100%;
 }
+.bd-input-simple_input::file-selector-button {
+  display: none;
+}
 .bd-input-simple_input:focus {
+  outline: none;
+}
+
+.bd-input-file-single {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--text-secondary);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+.bd-input-file-single:focus {
   outline: none;
 }
 
@@ -864,6 +932,76 @@ template {
   margin-bottom: 10px;
 }
 
+.bd-menu {
+  display: none;
+  position: absolute;
+  top: 72px;
+  right: 260px;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: var(--bg-nav);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.bd-menu .bd-menu-item {
+  margin: 0;
+  padding: 5px 80px;
+  display: block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 29px;
+  text-align: center;
+}
+.bd-menu .bd-menu-item:hover {
+  color: var(--text-tertiary);
+  background-color: var(--color-primary);
+  text-decoration: none;
+}
+
+.bd-btn-choseImg {
+  text-align: center;
+}
+.bd-btn-choseImg::file-selector-button {
+  display: none;
+}
+
+#drop-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+#drop-area {
+  width: 100%;
+  height: 167px;
+  background: rgba(86, 154, 246, 0.08);
+  border: 1px solid var(--text-secondary);
+  border-radius: 4px;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 100% */
+  text-align: center;
+  color: #3f4b5b;
+}
+
+#newListing-page-2,
+#newListing-page-3,
+#newListing-page-4 {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .bd-wrapper {
     padding-left: 191px;
@@ -902,6 +1040,44 @@ template {
   }
 }
 
+@media (min-width: 768px) {
+  .bd-wrapper-normal {
+    padding-left: 400px;
+    padding-right: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .bd-wrapper-normal {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (max-width: 420px) {
+  .bd-wrapper-normal {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bd-wrapper-120 {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+@media (max-width: 768px) {
+  .bd-wrapper-120 {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+@media (max-width: 420px) {
+  .bd-wrapper-120 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .bd-grid-50-width {
   display: grid;
   width: 100%;
@@ -918,6 +1094,22 @@ template {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-gap: 24px;
+}
+
+.bd-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+}
+
+.bd-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+}
+
+.bd-grid-justifyself-end {
+  justify-self: end;
 }
 
 .bd-m-r-10p {
@@ -938,4 +1130,12 @@ template {
 
 .bd-p-t-10 {
   padding-top: 10px;
+}
+
+.bd-widht-60p {
+  width: 60%;
+}
+
+.bd-width-200 {
+  width: 200px;
 }/*# sourceMappingURL=index.css.map */

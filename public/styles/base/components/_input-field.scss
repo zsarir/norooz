@@ -2,6 +2,7 @@
   display: block;
   width: 100%;
   height: auto;
+
   &_label {
     display: block;
     font-family: "SF Pro Text";
@@ -16,16 +17,32 @@
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
-    height: 40px;
+    height: 48px;
     padding: 3px 10px;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
     border-color: $text-secondary;
     width: 100%;
+    &::file-selector-button {
+      display: none;
+    }
 
     &:focus {
       outline: none;
     }
+  }
+}
+
+.bd-input-file-single {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid $text-secondary;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  &:focus {
+    outline: none;
   }
 }

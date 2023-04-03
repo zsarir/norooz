@@ -7,4 +7,5 @@ return [
         'dbname' => 'mvcdb',
         'charset' => 'utf8mb4'
     ],
+    'host' => 'mvcdb',
 ];

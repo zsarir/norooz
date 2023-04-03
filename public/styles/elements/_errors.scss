@@ -7,3 +7,23 @@
   margin-top: 5px;
   margin-buttom: 5px;
 }
+
+.bd-warning-container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  padding: 16px;
+  background-color: #fef7d3;
+  color: $text-primary;
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 29px;
+  border: solid;
+  border-width: 1px;
+  border-color: $text-secondary;
+  border-radius: 4px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}

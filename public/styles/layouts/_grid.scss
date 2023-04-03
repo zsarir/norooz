@@ -15,3 +15,18 @@
   grid-template-columns: 3fr 1fr;
   grid-gap: $grid-24-gap;
 }
+
+.bd-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $grid-24-gap;
+}
+.bd-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: $grid-24-gap;
+}
+
+.bd-grid-justifyself-end {
+  justify-self: end;
+}

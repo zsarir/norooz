@@ -1,0 +1,32 @@
+.bd-menu {
+  display: none;
+  position: absolute;
+  top: 72px;
+  right: 260px;
+  z-index: 999;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: $bg-nav;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  .bd-menu-item {
+    margin: 0;
+    padding: 5px 80px;
+    display: block;
+    color: $color-primary;
+    text-decoration: none;
+    font-family: "SF Pro Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    text-align: center;
+    &:hover {
+      color: $text-tertiary;
+      background-color: $color-primary;
+      text-decoration: none;
+    }
+  }
+}

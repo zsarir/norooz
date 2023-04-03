@@ -2,12 +2,14 @@
 
 namespace app\middleware;
 
+use app\Login;
+
 class Guest
 {
     public function handle()
     {
-        if (isset($_SESSION['user'])) {
-            header('location: /');
+        if (Login::userRole() !== 'guest') {
+            header("Location: /");
             exit();
         }
     }

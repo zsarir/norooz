@@ -15,46 +15,46 @@
     <div class="bd-gap-50"></div>
     <form action="/signup" method="POST">
         <div class="bd-input-simple">
-            <label class="bd-input-simple_label" for="email">Email</label>
-            <input name="email" id="email" class="bd-input-simple_input" type="text" <?php if (isset($params['email'])) {
-                                                                                            echo "value='{$params['email']}'";
-                                                                                        } ?>>
+            <label class="bd-input-simple_label" for="user_email">Email</label>
+            <input name="user_email" id="user_email" class="bd-input-simple_input" type="text" <?php if (isset($params['user_email'])) {
+                                                                                                    echo "value='{$params['user_email']}'";
+                                                                                                } ?>>
         </div>
         <?php
-        if (isset($errors['email']))
-            echo "<div class='bd-error'>{$errors['email']}</div>";
+        if (isset($errors['user_email']))
+            echo "<div class='bd-error'>{$errors['user_email']}</div>";
         ?>
         <div class="bd-gap-24"></div>
         <div class="bd-input-simple">
-            <label class="bd-input-simple_label" for="user_name">User Name</label>
-            <input name="user_name" id="user_name" class="bd-input-simple_input" type="text" <?php
-                                                                                                if (isset($params['user_name'])) {
-                                                                                                    echo "value='{$params['user_name']}'";
+            <label class="bd-input-simple_label" for="user_login">User Name</label>
+            <input name="user_login" id="user_login" class="bd-input-simple_input" type="text" <?php
+                                                                                                if (isset($params['user_login'])) {
+                                                                                                    echo "value='{$params['user_login']}'";
                                                                                                 }  ?>>
         </div>
 
         <?php
-        if (isset($errors['user_name']))
-            echo "<div class='bd-error'>{$errors['user_name']}</div>";
+        if (isset($errors['user_login']))
+            echo "<div class='bd-error'>{$errors['user_login']}</div>";
         ?>
         <div class="bd-gap-24"></div>
         <div class="bd-input-simple">
-            <label class="bd-input-simple_label" for="pass">Password</label>
-            <input name="pass" id="pass" class="bd-input-simple_input" type="password">
+            <label class="bd-input-simple_label" for="user_pass">Password</label>
+            <input name="user_pass" id="user_pass" class="bd-input-simple_input" type="password">
         </div>
         <?php
-        if (isset($errors['pass']))
-            echo "<div class='bd-error'>{$errors['pass']}</div>";
+        if (isset($errors['user_pass']))
+            echo "<div class='bd-error'>{$errors['user_pass']}</div>";
         ?>
 
         <div class="bd-gap-24"></div>
         <div class="bd-input-simple">
-            <label class="bd-input-simple_label" for="name">Name</label>
-            <input name="name" id="name" class="bd-input-simple_input" type="text" <?php
-                                                                                    if (isset($params['name'])) {
-                                                                                        echo "value='{$params['name']}'";
-                                                                                    }
-                                                                                    ?>>
+            <label class="bd-input-simple_label" for="user_nicename">Name</label>
+            <input name="user_nicename" id="user_nicename" class="bd-input-simple_input" type="text" <?php
+                                                                                                        if (isset($params['user_nicename'])) {
+                                                                                                            echo "value='{$params['user_nicename']}'";
+                                                                                                        }
+                                                                                                        ?>>
         </div>
 
         <div class="bd-gap-24"></div>

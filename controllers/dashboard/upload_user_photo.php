@@ -7,7 +7,7 @@ if (isset($_FILES['images'])) {
     $errors = [];
     $uploadedFiles = [];
 
-    $uploadDir = 'uploads/';
+    $uploadDir = 'assets/images/users/';
     if (!file_exists($uploadDir)) {
         mkdir($uploadDir, 0755, true);
     }
@@ -36,7 +36,7 @@ if (isset($_FILES['images'])) {
             if (move_uploaded_file($file_tmp, $target_file)) {
                 $uploadedFiles[] = basename($target_file);
                 $db = App::resolve(Database::class);
-                $query = "UPDATE `mvcdb`.`users` SET user_img = :user_img WHERE ID = {$_SESSION['user']['user_id']}";
+                $query = "UPDATE `mvcdb`.`users` SET user_img = :user_img WHERE ID = {$_SESSION['user']['ID']}";
                 $db->query($query, [
                     'user_img' => $file_name
                 ]);
@@ -47,11 +47,12 @@ if (isset($_FILES['images'])) {
     }
 
     if (!empty($uploadedFiles)) {
-        echo "Uploaded files: " . implode(', ', $uploadedFiles);
+        header('Location: ' . SITE_URL . '/dashboard/information');
     }
     if (!empty($errors)) {
-        echo "Errors: " . implode(', ', $errors);
+        view('dashboard', 'information', ['errors' => $errors]);
     }
 } else {
-    echo "No files to upload.";
+    view('dashboard', 'information', ['errors' => $errors]);
 }
+header('Location: ' . SITE_URL . '/dashboard/information');

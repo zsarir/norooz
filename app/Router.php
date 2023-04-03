@@ -10,12 +10,13 @@ class Router
 
     public function add($method, $uri, $controller)
     {
-        return $this->routes[] = [
+        $this->routes[] = [
             'method' => $method,
             'uri' => $uri,
             'controller' => $controller,
             'middleware' => null
         ];
+        return $this;
     }
 
     public function get($uri, $controller)
@@ -43,6 +44,7 @@ class Router
     public function only($key)
     {
         $this->routes[array_key_last($this->routes)]['middleware'] = $key;
+
         return $this;
     }
 

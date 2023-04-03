@@ -27,3 +27,32 @@
     padding-right: 16px;
   }
 }
+.bd-wrapper-normal {
+  @include desktop {
+    padding-left: 400px;
+    padding-right: 400px;
+  }
+  @include tablet {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.bd-wrapper-120 {
+  @include desktop {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  @include tablet {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  @include mobile {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
