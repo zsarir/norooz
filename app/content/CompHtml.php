@@ -2,8 +2,8 @@
 
 namespace app\content;
 
-use app\Database\Select;
-use app\Database;
+use app\database\Select;
+use app\database\Database;
 use app\App;
 
 class CompHtml
@@ -116,10 +116,10 @@ class CompHtml
     public function btn_back_next($backID, $nextID)
     {
         return '<div class="bd-grid-2">
-                    <button id="' . $backID . '" class="btn-tertiary  bd-grid-justifyself-end  bd-widht-60p  ">
+                    <button type="button" id="' . $backID . '" class="btn-tertiary  bd-grid-justifyself-end  bd-widht-60p  ">
                         Back
                     </button>
-                    <button id="' . $nextID . '"class="btn-primary  bd-widht-60p ">
+                    <button type="button" id="' . $nextID . '"class="btn-primary  bd-widht-60p ">
                         Next
                     </button>
                  </div>';

@@ -1,7 +1,7 @@
 <?php
 
 use app\Validator;
-use app\Database;
+use app\database\Database;
 use app\App;
 
 $user_email = $_SESSION['user']['user_email'];

@@ -3,7 +3,7 @@
 
 use app\Validator;
 use app\Login;
-use app\Database;
+use app\database\Database;
 use app\App;
 
 $errors = [];

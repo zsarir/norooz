@@ -2,7 +2,7 @@
 
 namespace app;
 
-use app\Database;
+use app\database\Database;
 use app\App;
 
 

@@ -4,8 +4,8 @@ session_start();
 use app\content\Plans;
 use app\Router;
 use app\Login;
-use app\Database\Select;
-use app\Database;
+use app\database\Select;
+use app\database\Database;
 use app\App;
 
 

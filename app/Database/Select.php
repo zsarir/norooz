@@ -1,8 +1,8 @@
 <?php
 
-namespace app\Database;
+namespace app\database;
 
-use app\Database;
+use app\database\Database;
 use app\App;
 
 class Select

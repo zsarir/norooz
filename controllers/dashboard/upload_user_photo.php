@@ -1,6 +1,6 @@
 <?php
 
-use app\Database;
+use app\database\Database;
 use app\App;
 
 if (isset($_FILES['images'])) {

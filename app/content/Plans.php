@@ -2,7 +2,7 @@
 
 namespace app\content;
 
-use app\Database;
+use app\database\Database;
 use app\App;
 
 class Plans
